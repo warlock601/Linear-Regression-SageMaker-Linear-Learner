@@ -11,7 +11,7 @@ Linear Regression Intuition: In Simple Linear Regression, we predict the value o
 </br> We'll put the data points and our objective will be to come up with a linear straight line. Goal is to obtain a relationship b/w employee salary and number of years of experience.
 
 ```bash
-  y=mx+b                  //where "m" is the slope of graph and x, y are cordinates.
+  y=mx+b                  //where "m" is the slope of graph, "b" is the y-intercept and x, y are cordinates.
 ```
-
+Once the coefficients "m" and "b" are recieved, we have obtained a simple linear regression model. 
 
