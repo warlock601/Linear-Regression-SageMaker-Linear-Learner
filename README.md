@@ -13,5 +13,6 @@ Linear Regression Intuition: In Simple Linear Regression, we predict the value o
 ```bash
   y=mx+b                  //where "m" is the slope of graph, "b" is the y-intercept and x, y are cordinates.
 ```
-Once the coefficients "m" and "b" are recieved, we have obtained a simple linear regression model. If "b" is zero, the line passed through the Origin. eg: y=3*x
+Once the coefficients "m" and "b" are recieved, we have obtained a simple linear regression model. If "b" is zero, the line passed through the Origin. eg: y=3*x </br>
+If m(slope) is positive, x and y are directly proportional to each other and if m(slope) is negative, x and y are inversly proportional to each other. 
 
