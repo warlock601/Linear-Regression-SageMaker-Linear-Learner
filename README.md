@@ -16,3 +16,6 @@ Linear Regression Intuition: In Simple Linear Regression, we predict the value o
 Once the coefficients "m" and "b" are recieved, we have obtained a simple linear regression model. If "b" is zero, the line passed through the Origin. eg: y=3*x </br>
 If m(slope) is positive, x and y are directly proportional to each other and if m(slope) is negative, x and y are inversly proportional to each other. 
 
+### Least Sum of Squares: 
+Way to find the best fit curve or line for a set of points. This method is also used to find the coefficients a and b.
+
