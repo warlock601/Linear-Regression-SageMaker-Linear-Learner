@@ -11,7 +11,7 @@ Linear Regression Intuition: In Simple Linear Regression, we predict the value o
 </br> We'll put the data points and our objective will be to come up with a linear straight line. Goal is to obtain a relationship b/w employee salary and number of years of experience.
 
 ```bash
-  y=mx+b                  //where "m" is the slope of graph, "b" is the y-intercept and x, y are cordinates.
+  y=mx+b                  //where "m" is the slope of graph, "b" is the y-intercept.
 ```
 Once the coefficients "m" and "b" are recieved, we have obtained a simple linear regression model. If "b" is zero, the line passed through the Origin. eg: y=3*x </br>
 If m(slope) is positive, x and y are directly proportional to each other and if m(slope) is negative, x and y are inversly proportional to each other. 
@@ -26,10 +26,29 @@ Testing set: Used for testing trained model.
 
 
 ### SageMaker Linear Learner: Supervised learning algo that is used to fit a line to the training data. Can be used for both Classification & Regression as follows:
-- Regression: contains continuous Numeric values.
-- Binary Classification: Output label must be either 0 or 1.
-- Multiclass Classification: Output labels must be from 0 to num_classes-1
+- Regression: contains continuous Numeric values. eg: Revenue predictions based on previous years performance
+- Binary Classification: Output label must be either 0 or 1. eg: Does this patient have a disease or not?
+- Multiclass Classification: Output labels must be from 0 to num_classes-1. eg: Should an autonomous car stop, slow down or accelerate.
 
 The best model optimizes either of the following: 
 - For regression: focus on continuous metrics such as mean square error, root mean squared error, cross entropy loss, absolute error.
-- For classification: focus on metrics such as F1 score, precision, accuracy or recall. 
+- For classification: focus on metrics such as F1 score, precision, accuracy or recall.
+
+### Sagemaker Linear Learner:
+- Ensure that data is shuffled before training. Normalization or feature scaling is offered by Linear Learner (critical preprocessing step to ensure that the model does not get dominated by weight of a single feature).
+- Linear learner uses Stochastic gradient descent to perform the training. Select an appropriate algo such as Adam, AdaFrad, SGD. Overcome model overfitting using L1, L2 regularization.
+- Multiple models could be optimized in parallel.
+- Validation: For regression- mean square error, root mean squared error, cross entropy loss, absolute error and for Classification- F1 score, precision, accuracy or recall
+
+### Sagemaker Linear Learner Hyperparameters:
+- Learning Rate: Step size used by the optmizer for parameter updates. Tells how aggressively we want to train our model.
+- L1: Regularization parameter
+- Mini_batch_size: number of observations per mini-batch
+- Wd: The weight decay parameter, known as L2 Regularization parameter and many more....
+
+### Sagemaker Lineart Learner supports these input data types: RecordIO-wrapped protobuf, Text/CSV, File or pipe mode
+
+## Tasks:
+### - Instantiate SageMaker Notebook.
+GroundTruth: Service that allows us to label dataset. We can label images, audio files etc.
+AWS Marketplace: Leverage or use already trained models.
