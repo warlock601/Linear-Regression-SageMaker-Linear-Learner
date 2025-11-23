@@ -19,3 +19,8 @@ If m(slope) is positive, x and y are directly proportional to each other and if 
 ### Least Sum of Squares: 
 Way to find the best fit curve or line for a set of points. This method is also used to find the coefficients a and b.
 
+</br>
+Data set is divided into 75% for training and 25% for testing. </br>
+Training set: Used for Model training. </br>
+Testing set: Used for testing trained model.
+
