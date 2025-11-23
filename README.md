@@ -48,7 +48,12 @@ The best model optimizes either of the following:
 
 ### Sagemaker Lineart Learner supports these input data types: RecordIO-wrapped protobuf, Text/CSV, File or pipe mode
 
+GroundTruth: Service that allows us to label dataset. We can label images, audio files etc. </br>
+AWS Marketplace: Leverage or use already trained models.
+Amazon Elastic Inference: Allows us to attach low-cost GPU-powered acceleration to Amazon EC2 and Sagemaker instances or Amazon ECS tasks, to reduce the cost of running deep learning inference by upto 75%. It supports TensorFlow, Apache MXNet, Pytorch and ONNX models. It can speed up the process for us and even save a lot of money. We can use it instead of using a purely dedicated GPU based instance for training.
+
 ## Tasks:
 ### - Instantiate SageMaker Notebook.
-GroundTruth: Service that allows us to label dataset. We can label images, audio files etc.
-AWS Marketplace: Leverage or use already trained models.
+- Create a notebook instance, select instance type, select whether to use Elastic Inference or not. Notebook instance will require permission to call SageMaker and S3, so we either provide an IAM role or create a new one. </br>
+Once the notebook instance is created, it will show "InService", it will show an option to Open Jupyter. Then we upload our jupyter notebook and .csv file. </br>
+- After upload select the kernel, "conda_python3" for example.
