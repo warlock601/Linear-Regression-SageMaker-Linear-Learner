@@ -19,8 +19,17 @@ If m(slope) is positive, x and y are directly proportional to each other and if 
 ### Least Sum of Squares: 
 Way to find the best fit curve or line for a set of points. This method is also used to find the coefficients a and b.
 
-</br>
+
 Data set is divided into 75% for training and 25% for testing. </br>
 Training set: Used for Model training. </br>
 Testing set: Used for testing trained model.
 
+
+### SageMaker Linear Learner: Supervised learning algo that is used to fit a line to the training data. Can be used for both Classification & Regression as follows:
+- Regression: contains continuous Numeric values.
+- Binary Classification: Output label must be either 0 or 1.
+- Multiclass Classification: Output labels must be from 0 to num_classes-1
+
+The best model optimizes either of the following: 
+- For regression: focus on continuous metrics such as mean square error, root mean squared error, cross entropy loss, absolute error.
+- For classification: focus on metrics such as F1 score, precision, accuracy or recall. 
